@@ -3,14 +3,6 @@ public class Dimensions {
     private int breadth;
     private int width;
 
-    public int getLength() {
-        return length;
-    }
-
-    public int getBreadth() {
-        return breadth;
-    }
-
     public int getWidth() {
         return width;
     }

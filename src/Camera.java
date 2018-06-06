@@ -1,20 +1,16 @@
 public class Camera {
     private double resolution;
-    private boolean first;
+    private boolean front;
     private boolean back;
 
-    public Camera(double resolution, boolean first, boolean back) {
+    public Camera(double resolution, boolean front, boolean back) {
         this.resolution = resolution;
-        this.first = first;
+        this.front = front;
         this.back = back;
     }
 
     public double getResolution() {
         return resolution;
-    }
-
-    public boolean isFirst() {
-        return first;
     }
 
     public boolean isBack() {
@@ -25,7 +21,7 @@ public class Camera {
     public String toString() {
         return "Camera{" +
                 "resolution=" + resolution +
-                ", first=" + first +
+                ", front=" + front +
                 ", back=" + back +
                 '}';
     }

@@ -25,6 +25,6 @@ public class MobileMain {
         System.out.println("Total no of samsung " + mobilePlatform.totalProductsByBrand("Samsung"));
         System.out.println("Width less than " + mobilePlatform.mobilesWithWidthLessThan(2));
         System.out.println("camera Resolution " + mobilePlatform.mobilesWithBackCameraResolutionMoreThan(10));
-        System.out.println("Filter by brand and dimensions width < 2cm "+new MobilePlatform(mobilePlatform.filterByBrand("Google")).mobilesWithWidthLessThan(2));
+        System.out.println("Filter by brand and dimensions width < 2cm " + new MobilePlatform(mobilePlatform.filterByBrand("Google")).mobilesWithWidthLessThan(2));
     }
 }

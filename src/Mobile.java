@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 
 public class Mobile {
@@ -7,7 +8,14 @@ public class Mobile {
     private String os;
     private double screenSize;
     private double discount;
-    public enum Color{RED,BLACK,WHITE,SILVER,GOLDEN};
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public enum Color {RED, BLACK, WHITE, SILVER, GOLDEN}
+
+    ;
     Color color;
     String brand;
     int ram;
@@ -17,7 +25,7 @@ public class Mobile {
     List<Camera> cameraList;
     Dimensions dimensions;
 
-    public Mobile(int id, String name, double price,String os, double screenSize, double discount, Color color, String brand, int ram, int storage, boolean dualSim, int battery, List<Camera> cameraList, Dimensions dimensions) {
+    public Mobile(int id, String name, double price, String os, double screenSize, double discount, Color color, String brand, int ram, int storage, boolean dualSim, int battery, List<Camera> cameraList, Dimensions dimensions) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -34,52 +42,12 @@ public class Mobile {
         this.dimensions = dimensions;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     public double getPrice() {
         return price;
     }
 
     public String getOs() {
         return os;
-    }
-
-    public double getScreenSize() {
-        return screenSize;
-    }
-
-    public double getDiscount() {
-        return discount;
-    }
-
-    public Color getColor() {
-        return color;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public int getRam() {
-        return ram;
-    }
-
-    public int getStorage() {
-        return storage;
-    }
-
-    public boolean isDualSim() {
-        return dualSim;
-    }
-
-    public int getBattery() {
-        return battery;
     }
 
     public List<Camera> getCameraList() {
@@ -91,7 +59,7 @@ public class Mobile {
     }
 
     public double getEffectivePrice() {
-        return (getPrice()-(getPrice()*getDiscount()/100.0));
+        return (price - (price * discount / 100.0));
 
     }
 
